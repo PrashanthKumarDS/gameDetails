@@ -1,0 +1,69 @@
+.detail {
+  &-intro {
+    display: flex;
+    height: 500px;
+    width: 100%;
+    //   background-color: aqua;
+    position: relative;
+  }
+
+  &-background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    filter: blur(5px);
+  }
+
+
+  img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  &-game-name {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 60px;
+    font-weight: bold;
+    -webkit-text-stroke: 2px rgba(7, 7, 7, 0.25);
+    color: #f1e9e9;
+    // filter: drop-shadow(2px 2px 5px #ffffff);
+  }
+
+  &-game-released {
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    -webkit-text-stroke: 2px rgba(10, 10, 10, 0.25);
+    color: #f1e9e9;
+    // filter: drop-shadow(2px 2px 5px #ffffff);
+  }
+  &-game-genre {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 20px;
+    -webkit-text-stroke: 2px rgba(10, 10, 10, 0.25);
+    color: #f1e9e9;
+    // filter: drop-shadow(2px 2px 5px #ffffff);
+  }
+}
+
+.loader{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: fixed;
+  width: 100%;
+
+}

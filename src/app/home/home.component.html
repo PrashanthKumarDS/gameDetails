@@ -1,0 +1,47 @@
+<!-- <p class="home">home works!</p> -->
+<div  class="loader"*ngIf="isShowLoader"><mat-spinner></mat-spinner>
+</div>
+<div *ngIf="!isShowLoader">
+    <div class="filters">
+        <mat-form-field>
+            <mat-label>Sort</mat-label>
+            <mat-select 
+            [(ngModel)]="sort" (selectionChange)="onSortChange($event)">
+                <mat-option  *ngFor="let option of sortingOptions"value="{{option}}">{{option}}</mat-option>
+        
+    
+            </mat-select>
+        </mat-form-field>
+    
+    </div>
+    
+    <div class="games">
+        <div *ngFor="let game of games; let i = index" class="game-container">
+            <div  class="game" (click)="navigateToDetails(game.id,game.name)">
+                <div class="game-thumbnail">
+                    <img [src]="game.background_image" alt="thumbnail" height="200px" width="300px">
+                </div>
+                <div class="game-description">
+                    <p class="game-title">{{game.name}}</p>
+                    <p class="game-rating">Rating: {{game.rating}}/5</p>
+        
+                    <div class="game-platform-container">
+                        <div  class="game-platform">
+                            <img src="assets/images/platform/ios.svg" alt="" height="35px" width="35px"             >
+                            <img src="assets/images/platform/playstation.svg" alt="" height="35px" width="35px"             >
+        
+                            <img src="assets/images/platform/linux.svg" alt="" height="35px" width="35px"             >
+        
+                            <!-- <p *ngIf="platformImageError">{{platform.platform.slug}}</p> -->
+        
+                          </div>
+                    </div>
+                  
+                      
+                </div>
+            </div>
+        </div>
+       
+    
+    </div>
+</div>

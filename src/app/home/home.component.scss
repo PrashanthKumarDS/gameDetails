@@ -1,0 +1,91 @@
+.home{
+    color: black;
+    background-color: yellow;
+}
+.loader{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    position: fixed;
+    width: 100%;
+
+}
+.filters{
+    display: flex;
+
+    width: 1200px;
+    padding: 20px;
+    overflow:hidden;
+}
+.games{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    // padding: 20px;
+    // background-color: aliceblue;
+}
+
+
+.game{
+    margin: 20px;
+    width: 300px;
+    height: 320px;
+    border-radius: 20px;
+    border: black;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(209, 184, 115);
+
+    &:hover{
+        // box-shadow: yellowgreen;
+        box-shadow: 0 0 30px rgb(182, 236, 95);
+
+        transform: translateY(-3px);
+
+    }
+
+    &-container{
+        background-size: cover;
+        // height: 320px;        // background-color: aquamarine;
+        overflow: hidden;
+            cursor: pointer;
+ 
+    }
+
+    &-thumbnail{
+        background-size: cover;
+        height: 200px;
+        // background-color: aquamarine;
+        overflow: hidden;
+    }
+
+    &-description{
+        padding: 10px;
+        height: 120px;
+        background-color: rgb(42, 43, 42);
+        overflow: hidden;
+    }
+    &-title{
+        font-size: 17px;
+        color: aliceblue;
+        font-weight: bold;
+        overflow: hidden;
+    }
+    &-rating{
+        font-size: 13px;
+        color: aliceblue;
+        font-weight: bold;
+        overflow: hidden;
+    }
+    &-platform{
+        display: flex;
+        gap: 10px;
+    }
+    &-platform-container {
+        display: flex;
+        gap: 10px; /* Adjust the gap between platforms as needed */
+      }
+    
+
+}

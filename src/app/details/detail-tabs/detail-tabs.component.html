@@ -1,0 +1,36 @@
+
+<div class="complete-details">
+
+    <mat-tab-group mat-stretch-tabs="ture" mat-align-tabs="center" [backgroundColor]="'primary'">
+        <mat-tab label="About">
+            <div class="complete-details-about">
+                <p>Platform:
+                    <span *ngFor="let item of gameDetails.parent_platforms; let last=last">
+                        {{ item.platform.name }}
+                        <span *ngIf="!last">,</span>
+                    </span>
+                </p>
+                <p>Publsher : {{gameDetails.publishers[0].name}}</p>
+
+                    <p>Website: <span><a  calss="complete-details-about-link" [href]="gameDetails.website" target="_blank">{{gameDetails.website}}</a></span></p>
+
+                <p>{{gameDetails.description_raw}}</p>
+                <p><mat-icon class="complete-details-about-vote-up">thumb_up</mat-icon>
+                    <span class="complete-details-about-count">55</span>
+                    <mat-icon class="complete-details-about-vote-down">thumb_down</mat-icon>
+                    <span class="complete-details-about-count">55</span>
+                </p>
+
+
+            </div>
+        </mat-tab>
+        <mat-tab label="Screenshot">
+            <div class="complete-screenshot">
+                <img class="complete-details-screenshot-images" [src]="gameDetails.background_image_additional">
+            </div>
+        </mat-tab>
+        <mat-tab label="Trailer"><video class="complete-trailer" controls>
+                <source src="https://player.vimeo.com/external/412050810.sd.mp4?s=53fc101f2f49741023e0a4228db802547668736d&profile_id=164&oauth2_token_id=57447761">
+            </video></mat-tab>
+    </mat-tab-group>
+</div>

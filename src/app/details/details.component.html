@@ -1,0 +1,16 @@
+<div  class="loader"*ngIf="isShowLoader"><mat-spinner></mat-spinner>
+</div>
+<div *ngIf="!isShowLoader">
+    <div class="detail">
+    <div class="detail-intro">
+        <div class="detail-background-image">
+            <img [src]="gameDetails.background_image">
+        </div>
+        <div class="detail-game-name">{{gameDetails.name}}</div>
+        <div class="detail-game-released">{{gameDetails.released}}</div>
+        <div *ngFor="let genre of gameDetails.genres;let i = index" class="detail-game-genre"><p>{{genre.name}}</p></div>
+    </div>
+</div>
+
+<app-detail-tabs [game]="gameDetails"></app-detail-tabs>
+</div>
